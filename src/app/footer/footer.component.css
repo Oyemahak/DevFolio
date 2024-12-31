@@ -1,0 +1,70 @@
+/* footer.component.css */
+
+.footer {
+  background-color: #f9f9f9; /* Light background color */
+  color: #333;              /* Text color */
+  padding: 30px 20px;       /* Padding around the footer content */
+  display: flex;
+  justify-content: center;  /* Center content horizontally */
+  align-items: center;      /* Center content vertically */
+  flex-direction: column;   /* Stack the items vertically */
+  text-align: center;       /* Center the text */
+  width: 100%;              /* Ensure the footer takes up full width */
+  border-top: 2px solid #e0e0e0; /* Add a top border for separation */
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+  max-width: 800px;        /* Limit the width for better layout */
+  width: 100%;
+}
+
+.footer-heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1a73e8; /* Use a vibrant color for the heading */
+}
+
+.footer-contact {
+  font-size: 16px;
+  line-height: 1.6;        /* Better readability */
+  margin-bottom: 15px;
+  color: #5f6368;          /* Slightly muted text color */
+}
+
+.footer-contact a {
+  color: #1a73e8;          /* Use a Google-style blue */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-rights {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #9aa0a6; /* Subtle color for the copyright */
+}
+
+/* Responsive design: Adjust the layout for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer-heading {
+    font-size: 24px;
+  }
+
+  .footer-contact {
+    font-size: 14px;
+  }
+
+  .footer-rights {
+    font-size: 12px;
+  }
+}

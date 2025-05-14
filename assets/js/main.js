@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Add lightning element (hidden by default)
+        // Add lightning element (hidden by moon)
         const lightning = document.createElement('div');
         lightning.className = 'lightning';
         document.body.appendChild(lightning);
@@ -137,9 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 200);
                 }
             }
-            // Enhanced star sparkle on resume hover (default theme)
+            // Enhanced star sparkle on resume hover (moon theme)
             resumeButton.addEventListener('mouseenter', function () {
-                if (document.body.classList.contains('default-theme')) {
+                if (document.body.classList.contains('moon-theme')) {
                     document.querySelectorAll('.star').forEach(star => {
                         star.style.animationDuration = '0.8s'; // Faster twinkle
                     });
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             resumeButton.addEventListener('mouseleave', function () {
-                if (document.body.classList.contains('default-theme')) {
+                if (document.body.classList.contains('moon-theme')) {
                     document.querySelectorAll('.star').forEach(star => {
                         star.style.animationDuration = `${2 + Math.random() * 5}s`; // Reset to normal speed
                     });
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (theme === 'rain') {
                 createRain();
             }
-            else if (theme === 'default') {
+            else if (theme === 'moon') {
                 createStars(300, 4); // More, larger stars for night theme
                 createMoon();
             }
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (savedTheme === 'rain') {
         createRain();
     }
-    else if (savedTheme === 'default') {
+    else if (savedTheme === 'moon') {
         createStars(300, 4);
         createMoon();
     }

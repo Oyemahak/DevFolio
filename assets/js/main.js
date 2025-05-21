@@ -204,3 +204,27 @@ document.addEventListener('DOMContentLoaded', () => {
         createMoon();
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const uxBtn = document.querySelector('[data-tab="ux"]');
+  const devBtn = document.querySelector('[data-tab="dev"]');
+  const uxProjects = document.querySelector('.ux-projects');
+  const devProjects = document.querySelector('.dev-projects');
+  const title = document.getElementById('projects-title');
+
+  uxBtn.addEventListener('click', () => {
+    uxBtn.classList.add('active');
+    devBtn.classList.remove('active');
+    uxProjects.style.display = 'flex';
+    devProjects.style.display = 'none';
+    title.textContent = 'Featured UX Projects';
+  });
+
+  devBtn.addEventListener('click', () => {
+    devBtn.classList.add('active');
+    uxBtn.classList.remove('active');
+    uxProjects.style.display = 'none';
+    devProjects.style.display = 'flex';
+    title.textContent = 'Featured Web Dev Projects';
+  });
+});

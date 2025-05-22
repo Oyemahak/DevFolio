@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahak Patel - Playground</title>
+  <title>Mahak Patel - Portfolio</title>
   <!-- Main Styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <!-- Theme Animation Styles -->
@@ -13,57 +13,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class="default-theme">
-  <!-- Header with Menu -->
+  <!-- Header -->
   <header>
     <div class="header-grid">
       <div class="header-col logo-col">
         <a href="index.html" class="logo-link">
-          <img class="logo" src="assets/images/logo.png" alt="Mahak Patel's logo - MP">
+          <img class="logo" src="assets/images/logo.png" alt="Mahak Patel's logo - MP" />
         </a>
       </div>
       <div class="header-col role-col">
         <div class="theme-switcher">
-          <button class="theme-btn active" data-theme="default" aria-label="Default Theme">
-            <i class="fas fa-palette"></i>
-          </button>
-          <button class="theme-btn" data-theme="moon" aria-label="Moon Theme">
-            <i class="fas fa-moon"></i>
-          </button>
-          <button class="theme-btn" data-theme="snow" aria-label="Snow Theme">
-            <i class="fas fa-snowflake"></i>
-          </button>
-          <button class="theme-btn" data-theme="rain" aria-label="Rain Theme">
-            <i class="fas fa-cloud-rain"></i>
-          </button>
+          <button class="theme-btn active" data-theme="default" aria-label="Default Theme"><i
+              class="fas fa-palette"></i></button>
+          <button class="theme-btn" data-theme="moon" aria-label="Moon Theme"><i class="fas fa-moon"></i></button>
+          <button class="theme-btn" data-theme="snow" aria-label="Snow Theme"><i class="fas fa-snowflake"></i></button>
+          <button class="theme-btn" data-theme="rain" aria-label="Rain Theme"><i class="fas fa-cloud-rain"></i></button>
         </div>
       </div>
       <div class="header-col nav-col">
         <nav>
           <ul class="desktop-menu">
-            <li class="tooltip-bottom">
-              <a href="index.html">Home</a>
-              <span class="tooltiptext-bottom">Go back to home. It's always safe there</span>
-            </li>
-            <li class="tooltip-bottom">
-              <a href="play.html">Play</a>
-              <span class="tooltiptext-bottom">Yeah yeah, check out my playground—crazy stuff lives here</span>
-            </li>
-            <li class="tooltip-bottom">
-              <a href="about.html">About</a>
-              <span class="tooltiptext-bottom">Obviously, you should better know me</span>
-            </li>
-            <li class="tooltip-bottom">
-              <a href="#contact">Contact</a>
-              <span class="tooltiptext-bottom">Wanna talk? Hit me up right here.</span>
-            </li>
+            <li class="tooltip-bottom"><a href="index.html">Home</a><span class="tooltiptext-bottom">Go back to home.
+                It's always safe there</span></li>
+            <li class="tooltip-bottom"><a href="play.html">Play</a><span class="tooltiptext-bottom">Yeah yeah, check out
+                my playground—crazy stuff lives here</span></li>
+            <li class="tooltip-bottom"><a href="about.html">About</a><span class="tooltiptext-bottom">Obviously, you
+                should better know me</span></li>
+            <li class="tooltip-bottom"><a href="#contact">Contact</a><span class="tooltiptext-bottom">Wanna talk? Hit me
+                up right here.</span></li>
           </ul>
-          <div class="mobile-menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
+          <div class="mobile-menu-icon"><i class="fas fa-bars"></i></div>
         </nav>
       </div>
     </div>
@@ -71,71 +55,56 @@
 
   <!-- Main Content -->
   <main>
-    <!-- Play Section -->
     <section id="projects">
-      <div class="projects-header-centered" style="margin-bottom: 16px;">
+      <div class="projects-header-centered playground-header">
         <h2>Mahak's Playground</h2>
-        <p class="contact-description" style="margin-top: 8px;">Not just code, this is where creativity gets to play! Try out these mini games I built just for fun.</p>
+        <p class="contact-description">Not just code, this is where creativity gets to play! Try out these mini games I
+          built just for fun.</p>
       </div>
 
-      <div class="projects-grid" style="justify-content: center;">
-        <!-- Game Card 1 -->
-        <div class="project" style="max-width: 320px; text-align: center; padding: 24px;">
-          <img src="assets/images/touch-me-preview.png" alt="Touch Me Game Preview" style="width: 100%; height: auto; border-radius: 8px;">
-          <h3 style="margin-top: 16px;">Touch Me</h3>
-          <p style="font-size: 14px;">Test your reflexes with this fast-paced game. Ready, set... tap!</p>
-          <a href="touchme.html" target="_blank">
-            <button class="resume-button" style="margin-top: 12px;">Play Now</button>
-          </a>
+      <div class="projects-grid playground-grid">
+        <div class="project playground-card">
+          <img src="assets/images/touch-me-preview.png" alt="Touch Me Game Preview" />
+          <h3>Touch Me</h3>
+          <p>Test your reflexes with this fast-paced game. Ready, set... tap!</p>
+          <a href="touchme.html" target="_blank"><button class="resume-button center-btn">Play Now</button></a>
         </div>
 
-        <!-- Game Card 2 -->
-        <div class="project" style="max-width: 320px; text-align: center; padding: 24px;">
-          <img src="assets/images/emogy-preview.png" alt="Emoji Match Game Preview" style="width: 100%; height: auto; border-radius: 8px;">
-          <h3 style="margin-top: 16px;">Match Emogy</h3>
-          <p style="font-size: 14px;">Can your brain keep up with emoji chaos? Find the pairs before the clock runs out!</p>
-          <a href="matchemogy.html" target="_blank">
-            <button class="resume-button" style="margin-top: 12px;">Play Now</button>
-          </a>
+        <div class="project playground-card">
+          <img src="assets/images/emogy-preview.png" alt="Emoji Match Game Preview" />
+          <h3>Match Emogy</h3>
+          <p>Can your brain keep up with emoji chaos? Find the pairs before the clock runs out!</p>
+          <a href="matchemogy.html" target="_blank"><button class="resume-button center-btn">Play Now</button></a>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-        <section id="contact">
-            <div class="contact-container">
-                <h2 class="contact-header">Get in Touch</h2>
-                <p class="contact-description">Have a question or want to work together? I'd love to hear from you.</p>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Hey, what's your first name?">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email"
-                            placeholder="Drop your email here. I promise no spam!">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message"
-                            placeholder="Tell me all the things! (Or just a quick hello.)"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="send-message-button">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+    <section id="contact">
+      <div class="contact-container">
+        <h2 class="contact-header">Get in Touch</h2>
+        <p class="contact-description">Have a question or want to work together? I'd love to hear from you.</p>
+        <form>
+          <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name"
+              placeholder="Hey, what's your first name?" /></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email"
+              placeholder="Drop your email here. I promise no spam!" /></div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" name="message"
+              placeholder="Tell me all the things! (Or just a quick hello.)"></textarea></div>
+          <div><button type="submit" class="send-message-button">Send Message</button></div>
+        </form>
+      </div>
+    </section>
 
-    <!-- Separator Line -->
     <div class="separator"></div>
   </main>
 
   <!-- Footer -->
   <footer>
     <div class="social-links">
-      <p>Connect with me on <a href="https://www.linkedin.com/in/mahak-patel-167640150/">LinkedIn</a>, <a href="https://www.instagram.com/oyemahak/">Instagram</a>, or <a href="mailto:mahakpateluux@gmail.com">Email</a> me at mahakpateluux@gmail.com.</p>
+      <p>Connect with me on <a href="https://www.linkedin.com/in/mahak-patel-167640150/">LinkedIn</a>, <a
+          href="https://www.instagram.com/oyemahak/">Instagram</a>, or <a
+          href="mailto:mahakpateluux@gmail.com">Email</a> me at mahakpateluux@gmail.com.</p>
     </div>
     <p class="copyright">© 2024 Mahak Patel. All rights reserved.</p>
   </footer>

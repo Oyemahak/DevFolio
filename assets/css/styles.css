@@ -30,6 +30,10 @@ h2 {
     line-height: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ============================================= */
 /*              HEADER STYLES                    */
 /* ============================================= */
@@ -75,6 +79,13 @@ header {
 .logo {
     width: 32px;
     height: 32px;
+    display: block;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .role {

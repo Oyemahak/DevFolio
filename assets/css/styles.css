@@ -376,6 +376,11 @@ header {
     box-sizing: border-box;
 }
 
+.project a {
+  display: flex;
+  justify-content: center;
+}
+
 .project img {
     max-width: 100%;
     border-radius: 4px;

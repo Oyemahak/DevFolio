@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {number} count - Number of stars to create
      * @param {number} sizeVariation - Max size variation for stars
      */
-    function createStars(count = 200, sizeVariation = 3) {
+    function createStars(count = 80, sizeVariation = 3) {
         for (let i = 0; i < count; i++) {
             const star = document.createElement('div');
             star.className = 'star';
@@ -228,6 +228,41 @@ document.addEventListener("DOMContentLoaded", () => {
         title.textContent = 'Featured Web Dev Projects';
     });
 });
+
+// =============================================
+//     Mobile Worked For Carousel
+// =============================================
+
+const carouselImages = document.querySelectorAll(".mobile-companies-img");
+const prevBtn = document.querySelector(".arrow-left");
+const nextBtn = document.querySelector(".arrow-right");
+
+let currentImage = 0;
+
+function updateCarouselDisplay() {
+  carouselImages.forEach((img, index) => {
+    img.classList.toggle("active", index === currentImage);
+  });
+
+  prevBtn.disabled = currentImage === 0;
+  nextBtn.disabled = currentImage === carouselImages.length - 1;
+}
+
+prevBtn.addEventListener("click", () => {
+  if (currentImage > 0) {
+    currentImage--;
+    updateCarouselDisplay();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentImage < carouselImages.length - 1) {
+    currentImage++;
+    updateCarouselDisplay();
+  }
+});
+
+updateCarouselDisplay(); // Initialize
 
 // =============================================
 //     Contact Form Submission + Celebration

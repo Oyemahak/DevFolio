@@ -121,32 +121,36 @@
         </p>
       </div>
     </section>
+
     <!-- Contact Section -->
-        <section id="contact">
-            <div class="contact-container">
-                <h2 class="contact-header">Get in Touch</h2>
-                <p class="contact-description">Have a question or want to work together? I'd love to hear from you.</p>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Hey, what's your first name?">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email"
-                            placeholder="Drop your email here. I promise no spam!">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message"
-                            placeholder="Tell me all the things! (Or just a quick hello.)"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="send-message-button">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+    <section id="contact">
+      <div class="contact-container">
+        <h2 class="contact-header">Get in Touch</h2>
+        <p class="contact-description">Have a question or want to work together? I'd love to hear from you.</p>
+
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Hey, what's your first name?" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Drop your email here. I promise no spam!" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me all the things! (Or just a quick hello.)"
+              required></textarea>
+          </div>
+
+          <div class="form-status-wrap">
+            <button type="submit" class="send-message-button">Send Message</button>
+            <div id="form-status" class="form-status-text"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- Separator Line -->
     <div class="separator"></div>
   </main>

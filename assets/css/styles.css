@@ -679,6 +679,61 @@ form textarea {
 }
 
 /* ============================================= */
+/*     FORM STATUS MESSAGE + CELEBRATION         */
+/* ============================================= */
+
+.form-status-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.form-status-text {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #10b981;
+  text-align: center;
+  min-height: 24px;
+  transition: opacity 0.8s ease-in-out;
+  opacity: 0;
+}
+
+/* Celebration Confetti Emojis */
+.celebration-emoji {
+  position: fixed;
+  font-size: 24px;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 9999;
+  animation: floatDown 3s ease-out forwards;
+}
+
+/* Smooth emoji fall animation */
+@keyframes floatDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+}
+
+/* Responsive message section tweak */
+@media (max-width: 480px) {
+  .form-status-text {
+    font-size: 14px;
+  }
+
+  .celebration-emoji {
+    font-size: 20px;
+  }
+}
+
+/* ============================================= */
 /*              BUTTON STYLES                    */
 /* ============================================= */
 .resume-button {

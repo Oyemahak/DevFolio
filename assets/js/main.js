@@ -206,25 +206,81 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const uxBtn = document.querySelector('[data-tab="ux"]');
-  const devBtn = document.querySelector('[data-tab="dev"]');
-  const uxProjects = document.querySelector('.ux-projects');
-  const devProjects = document.querySelector('.dev-projects');
-  const title = document.getElementById('projects-title');
+    const uxBtn = document.querySelector('[data-tab="ux"]');
+    const devBtn = document.querySelector('[data-tab="dev"]');
+    const uxProjects = document.querySelector('.ux-projects');
+    const devProjects = document.querySelector('.dev-projects');
+    const title = document.getElementById('projects-title');
 
-  uxBtn.addEventListener('click', () => {
-    uxBtn.classList.add('active');
-    devBtn.classList.remove('active');
-    uxProjects.style.display = 'flex';
-    devProjects.style.display = 'none';
-    title.textContent = 'Featured UX Projects';
-  });
+    uxBtn.addEventListener('click', () => {
+        uxBtn.classList.add('active');
+        devBtn.classList.remove('active');
+        uxProjects.style.display = 'flex';
+        devProjects.style.display = 'none';
+        title.textContent = 'Featured UX Projects';
+    });
 
-  devBtn.addEventListener('click', () => {
-    devBtn.classList.add('active');
-    uxBtn.classList.remove('active');
-    uxProjects.style.display = 'none';
-    devProjects.style.display = 'flex';
-    title.textContent = 'Featured Web Dev Projects';
-  });
+    devBtn.addEventListener('click', () => {
+        devBtn.classList.add('active');
+        uxBtn.classList.remove('active');
+        uxProjects.style.display = 'none';
+        devProjects.style.display = 'flex';
+        title.textContent = 'Featured Web Dev Projects';
+    });
+});
+
+// =============================================
+//     Contact Form Submission + Celebration
+// =============================================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+    const button = form.querySelector("button");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Show loading state
+        button.disabled = true;
+        button.textContent = "Sending...";
+
+        const formData = new FormData(form);
+
+        fetch("https://formsubmit.co/ajax/mahakpateluiux@gmail.com", {
+            method: "POST",
+            body: formData,
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                status.textContent = "🎉 Message sent successfully!";
+                status.style.opacity = "1"; // Reset visibility
+                setTimeout(() => {
+                    status.style.opacity = "0"; // Fade out after 5 sec
+                }, 5000);
+
+                button.disabled = false;
+                button.textContent = "Send Message";
+                form.reset();
+                triggerCelebration();
+            })
+            .catch((error) => {
+                status.textContent = "❌ Something went wrong. Please try again.";
+                button.disabled = false;
+                button.textContent = "Send Message";
+            });
+    });
+
+    function triggerCelebration() {
+        const emojis = ["🎊", "✨", "🎉", "🎈"];
+        for (let i = 0; i < 64; i++) {
+            const el = document.createElement("span");
+            el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            el.className = "celebration-emoji";
+            el.style.left = Math.random() * 100 + "vw";
+            el.style.top = Math.random() * -100 + "px";
+            document.body.appendChild(el);
+            setTimeout(() => el.remove(),3000);
+        }
+    }
 });
